@@ -1,11 +1,13 @@
-__all__ = ['PatchTST']
-
 import os
 import sys
 import inspect
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-sys.path.insert(0, currentdir + '/PatchTST_supervised')
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+
+__all__ = ['PatchTST']
+
 
 # Cell
 from typing import Callable, Optional
