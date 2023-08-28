@@ -1,5 +1,12 @@
 __all__ = ['PatchTST']
 
+import os
+import sys
+import inspect
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+sys.path.insert(0, currentdir + '/PatchTST_supervised')
+
 # Cell
 from typing import Callable, Optional
 import torch
