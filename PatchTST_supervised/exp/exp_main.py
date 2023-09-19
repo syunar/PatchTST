@@ -315,6 +315,8 @@ class Exp_Main(Exp_Basic):
     def predict(self, setting, load=False):
         pred_data, pred_loader = self._get_data(flag='pred')
 
+        ipdb.set_trace()
+        
         if load:
             path = os.path.join(self.args.checkpoints, setting)
             best_model_path = path + '/' + 'checkpoint.pth'
