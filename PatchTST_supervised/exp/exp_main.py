@@ -16,6 +16,7 @@ import time
 import warnings
 import matplotlib.pyplot as plt
 import numpy as np
+import ipdb
 
 warnings.filterwarnings('ignore')
 
@@ -316,7 +317,7 @@ class Exp_Main(Exp_Basic):
         pred_data, pred_loader = self._get_data(flag='pred')
 
         ipdb.set_trace()
-        
+
         if load:
             path = os.path.join(self.args.checkpoints, setting)
             best_model_path = path + '/' + 'checkpoint.pth'
