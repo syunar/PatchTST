@@ -10,6 +10,8 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+import ipdb
+
 
 class Dataset_ETT_hour(Dataset):
     def __init__(self, root_path, flag='train', size=None,
@@ -365,6 +367,8 @@ class Dataset_Pred(Dataset):
         elif self.timeenc == 1:
             data_stamp = time_features(pd.to_datetime(df_stamp['date'].values), freq=self.freq)
             data_stamp = data_stamp.transpose(1, 0)
+
+        ipdb.set_trace()
 
         self.data_x = data[border1:border2]
         if self.inverse:
