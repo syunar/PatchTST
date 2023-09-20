@@ -320,8 +320,8 @@ class Exp_Main(Exp_Basic):
         
 
         if load:
-            # path = os.path.join(self.args.checkpoints, setting)
-            best_model_path = self.args.checkpoints
+            path = os.path.join(self.args.checkpoints, setting)
+            best_model_path = path + '/' + 'checkpoint.pth'
             self.model.load_state_dict(torch.load(best_model_path))
             print("loaded checkpoint")
 

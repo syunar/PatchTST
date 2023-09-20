@@ -5,7 +5,7 @@ fi
 if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
-seq_len=256
+seq_len=504
 model_name=PatchTST
 
 root_path_name=./dataset/
