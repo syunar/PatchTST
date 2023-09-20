@@ -370,4 +370,4 @@ class Exp_Main(Exp_Basic):
 
         np.save(folder_path + 'real_prediction.npy', preds)
 
-        return
+        return pred_data
