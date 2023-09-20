@@ -244,7 +244,7 @@ class Dataset_Custom(Dataset):
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
 
-        ipdb.set_trace()
+        print(df_raw.columns)
 
         if self.features == 'M' or self.features == 'MS':
             cols_data = df_raw.columns[1:]
