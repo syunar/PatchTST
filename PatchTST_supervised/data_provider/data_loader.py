@@ -225,7 +225,8 @@ class Dataset_Custom(Dataset):
         df_raw = pd.read_csv(os.path.join(self.root_path,
                                           self.data_path))
         
-        df_raw['date'] = pd.to_datetime(df_raw['date'])
+        # df_raw['date'] = pd.to_datetime(df_raw['date'])
+        # df_raw = df_raw.set_index('date')
 
         '''
         df_raw.columns: ['date', ...(other features), target feature]
@@ -242,6 +243,8 @@ class Dataset_Custom(Dataset):
         border2s = [num_train, num_train + num_vali, len(df_raw)]
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
+
+        display(df_raw)
 
         if self.features == 'M' or self.features == 'MS':
             cols_data = df_raw.columns[1:]
