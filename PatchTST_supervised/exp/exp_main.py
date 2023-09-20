@@ -325,6 +325,7 @@ class Exp_Main(Exp_Basic):
             self.model.load_state_dict(torch.load(best_model_path))
             print("loaded checkpoint")
 
+        print("not loaded checkpoint")
         preds = []
 
         self.model.eval()
