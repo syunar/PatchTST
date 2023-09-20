@@ -224,6 +224,8 @@ class Dataset_Custom(Dataset):
         self.scaler = StandardScaler()
         df_raw = pd.read_csv(os.path.join(self.root_path,
                                           self.data_path))
+        
+        df_raw['date'] = pd.to_datetime(df_raw['date'])
 
         '''
         df_raw.columns: ['date', ...(other features), target feature]
