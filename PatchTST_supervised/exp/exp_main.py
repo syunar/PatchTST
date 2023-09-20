@@ -311,7 +311,7 @@ class Exp_Main(Exp_Basic):
         np.save(folder_path + 'pred.npy', preds)
         # np.save(folder_path + 'true.npy', trues)
         # np.save(folder_path + 'x.npy', inputx)
-        return
+        return test_data
 
     def predict(self, setting, load=False):
         pred_data, pred_loader = self._get_data(flag='pred')
@@ -325,7 +325,7 @@ class Exp_Main(Exp_Basic):
             self.model.load_state_dict(torch.load(best_model_path))
             print("loaded checkpoint")
 
-        print("not loaded checkpoint")
+
         preds = []
 
         self.model.eval()
